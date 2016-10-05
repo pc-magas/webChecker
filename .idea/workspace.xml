@@ -64,19 +64,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="Application.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/app/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="21" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+            <state line="7" column="0" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="585">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Application.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/app/Application.java">
+      <file leaf-file-name="MyHttpHandler.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/app/http/MyHttpHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="47" selection-start="643" selection-end="643" vertical-scroll-proportion="0.6174957" vertical-offset="0" max-vertical-offset="583">
+            <state line="30" column="25" selection-start="829" selection-end="829" vertical-scroll-proportion="0.77186966" vertical-offset="0" max-vertical-offset="690">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,12 +84,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyHttpHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/app/app/http/MyHttpHandler.java">
+      <file leaf-file-name="ParameterFilter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/app/http/ParameterFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="48" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+            <state line="84" column="33" selection-start="2312" selection-end="2312" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1860">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#956#972#0" expanded="true" />
+                <element signature="e#1373#1403#1" expanded="true" />
+                <element signature="e#1460#1476#0" expanded="true" />
+                <element signature="e#1807#1837#0" expanded="true" />
+                <element signature="e#3067#3075#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,12 +110,13 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/app/Application/http/HttpHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/Application/http/MyHttpHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/Application/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/app/http/MyHttpHandler.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/app/app/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/app/http/ParameterFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/app/http/MyHttpHandler.java" />
       </list>
     </option>
   </component>
@@ -220,6 +226,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="remindSyntax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="remindSyntax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,7 +464,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -441,7 +477,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32893288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32893288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -479,23 +515,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+        <state line="8" column="35" selection-start="415" selection-end="415" vertical-scroll-proportion="0.2058319" vertical-offset="0" max-vertical-offset="600">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/app/http/MyHttpHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="48" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/app/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="47" selection-start="643" selection-end="643" vertical-scroll-proportion="0.6174957" vertical-offset="0" max-vertical-offset="583">
+        <state line="7" column="0" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/app/http/ParameterFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="33" selection-start="2312" selection-end="2312" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1860">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#956#972#0" expanded="true" />
+            <element signature="e#1373#1403#1" expanded="true" />
+            <element signature="e#1460#1476#0" expanded="true" />
+            <element signature="e#1807#1837#0" expanded="true" />
+            <element signature="e#3067#3075#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/app/http/MyHttpHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="25" selection-start="829" selection-end="829" vertical-scroll-proportion="0.77186966" vertical-offset="0" max-vertical-offset="690">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
