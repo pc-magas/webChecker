@@ -7,5 +7,9 @@ import app.app.image.iterate.ImageElementVisitorInterface;
  */
 public interface ImageElement
 {
+    /**
+     * Method that does all the drawing
+     * @param visitor The class that implements the drawing function
+     */
     public abstract void draw(ImageElementVisitorInterface visitor);
 }
