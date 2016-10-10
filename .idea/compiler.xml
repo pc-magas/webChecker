@@ -26,6 +26,8 @@
         <module name="remindSyntax" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="remindSyntax" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
-
