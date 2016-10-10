@@ -1,3 +1,4 @@
 remindSyntax.iml
 .src/main/java/app/app/TestRun.java
-target/*
+target
+target/classes/app/app/Application.class
