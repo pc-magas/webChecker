@@ -87,15 +87,6 @@ public class CheckerBoard  extends AbstractSizableImageElement
 
 
     /**
-     * Determine wether the shape is square or not
-     * @return
-     */
-    public boolean isSquare()
-    {
-        return this.getHeight()==this.getWidth();
-    }
-
-    /**
      * Method that Allows us to append a tile to the CheckerBoard
      */
     public void addElement(AbstractSizableImageElement e) throws Exception
@@ -153,29 +144,37 @@ public class CheckerBoard  extends AbstractSizableImageElement
         }
     }
 
+    /**
+     * Checks id this class has element as available image element to draw
+     * @param element The element we want to check if exists
+     * @return
+     */
     public boolean hasElement(AbstractSizableImageElement element)
     {
         return this.availableElements.contains(element);
     }
 
-    /**
-     *
-     * @param other
-     * @return
-     */
-    public boolean equals(CheckerBoard other)
-    {
-        boolean ok=true;
 
-        for(AbstractSizableImageElement e : this.availableElements)
+    @Override
+    public boolean equals(Object other)
+    {
+        boolean ok = true;
+
+        if(other instanceof CheckerBoard)
         {
-            if(!other.hasElement(e))
-            {
-                ok=false;
-                break;
+            CheckerBoard otherToCompare = (CheckerBoard) other;
+
+            for (AbstractSizableImageElement e : this.availableElements) {
+                if (!otherToCompare.hasElement(e)) {
+                    ok = false;
+                    break;
+                }
             }
         }
-
+        else
+        {
+            ok=false;
+        }
         return ok;
     }
 }

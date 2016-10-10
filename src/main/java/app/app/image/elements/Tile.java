@@ -1,6 +1,7 @@
 package app.app.image.elements;
 
 import app.app.image.AbstractSizableImageElement;
+import com.sun.corba.se.impl.orbutil.ObjectWriter;
 
 import java.awt.Color;
 
@@ -43,14 +44,18 @@ public class Tile  extends AbstractSizableImageElement
         return this.color;
     }
 
-    /**
-     *
-     * @param other The other tile to
-     * @return
-     */
-    public boolean equals(Tile other)
+
+    @Override
+    public boolean equals(Object other)
     {
-        return this.getColor().equals(other.getColor());
+
+        if(other instanceof Tile)
+        {
+            Tile otherTile=(Tile) other;
+            return this.getColor().equals(otherTile.getColor());
+        }
+
+        return false;
     }
 
 
