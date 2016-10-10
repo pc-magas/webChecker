@@ -2,7 +2,7 @@ package app.app.image.elements;
 
 
 import app.app.image.AbstractSizableImageElement;
-import app.app.image.iterate.ImageElementVisitorInterface;
+import app.app.image.iterate.ImageElementDrawingAlgorithmInterface;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -126,7 +126,7 @@ public class CheckerBoard  extends AbstractSizableImageElement
     }
 
     @Override
-    public void draw(ImageElementVisitorInterface visitor)
+    public void draw(ImageElementDrawingAlgorithmInterface visitor)
     {
         for(int i=0;i<this.checkerGrid.length;i++)
         {

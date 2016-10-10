@@ -1,7 +1,6 @@
 package app.app.image;
 
-import app.app.image.elements.Tile;
-import app.app.image.iterate.ImageElementVisitorInterface;
+import app.app.image.iterate.ImageElementDrawingAlgorithmInterface;
 
 /**
  * Created by pcmagas on 9/10/2016.
@@ -33,8 +32,8 @@ public abstract class AbstractSizableImageElement implements ImageElement
     }
 
     @Override
-    public void draw(ImageElementVisitorInterface visitor)
+    public void draw(ImageElementDrawingAlgorithmInterface visitor)
     {
-        visitor.visit(this);
+        visitor.applyDrawAlgorithm(this);
     }
 }
