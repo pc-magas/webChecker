@@ -6,6 +6,7 @@ import app.app.image.draw.ImageElementDrawingAlgorithmInterface;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.StringTokenizer;
 
 
 /**
@@ -118,11 +119,18 @@ public class CheckerBoard  extends AbstractSizableImageElement
      */
     private AbstractSizableImageElement selectWhatToDraw(AbstractSizableImageElement top, AbstractSizableImageElement previous)
     {
+        if(this.availableElements.size()==1)
+        {
+            return this.availableElements.get(0);
+        }
+
         ArrayList<AbstractSizableImageElement> tilesToSelect= new ArrayList<AbstractSizableImageElement>();
 
         for(AbstractSizableImageElement t : this.availableElements)
         {
-            if( ( top!= null && t.equals(top) )|| ( previous != null && t.equals(previous)) )
+            if(  ( top!= null && t.equals(top) )||
+                 ( previous != null && t.equals(previous))
+              )
             {
                 continue;
             }
@@ -146,8 +154,8 @@ public class CheckerBoard  extends AbstractSizableImageElement
         {
             for(int j=0;j<this.checkerGrid[i].length;j++)
             {
-                AbstractSizableImageElement top=(i>0)?this.checkerGrid[i-1][j]:null;
-                AbstractSizableImageElement previous=(j>0)?this.checkerGrid[i][j-1]:null;
+                AbstractSizableImageElement top=(i>1)?this.checkerGrid[i-1][j]:null;
+                AbstractSizableImageElement previous=(j>1)?this.checkerGrid[i][j-1]:null;
 
                 AbstractSizableImageElement currentTile=this.selectWhatToDraw(top,previous);
 
@@ -185,7 +193,7 @@ public class CheckerBoard  extends AbstractSizableImageElement
 
     /**
      * Checks if can draw the next Element
-     * @return true if we can get another element
+     * @return true if can draw
      */
     public boolean canGetElement()
     {
@@ -225,5 +233,26 @@ public class CheckerBoard  extends AbstractSizableImageElement
             ok=false;
         }
         return ok;
+    }
+
+    public String toString() {
+        String returnString = "Available Tiles: \n";
+
+        for (AbstractSizableImageElement t : this.availableElements) {
+            returnString += t.toString() + "\n";
+        }
+
+        returnString += "\nTileGrid:\n";
+
+        for (int i = 0; i < this.checkerGrid.length; i++)
+        {
+            for (int j = 0; j < this.checkerGrid[i].length; j++)
+            {
+                returnString+=this.checkerGrid[i][j].toString()+"\t";
+            }
+            returnString+="\n";
+        }
+
+        return returnString;
     }
 }

@@ -18,11 +18,15 @@ public class Tile  extends AbstractSizableImageElement
 
     /**
      * @param c The tile's color
-     * @param parent A tile can be part of a larger Image, therefore we set a parent
      */
-    public Tile(Color c, AbstractSizableImageElement parent)
+    public Tile(Color c)
     {
         this.setColor(c);
+    }
+
+    public Tile(Color c, AbstractSizableImageElement parent)
+    {
+        this(c);
         this.setParent(parent);
     }
 
