@@ -2,7 +2,7 @@ package app.app.image.elements;
 
 
 import app.app.image.AbstractSizableImageElement;
-import app.app.image.iterate.ImageElementDrawingAlgorithmInterface;
+import app.app.image.draw.ImageElementDrawingAlgorithmInterface;
 
 import java.util.ArrayList;
 import java.util.Collections;
