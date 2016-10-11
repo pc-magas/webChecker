@@ -35,6 +35,16 @@ public class CheckerBoard  extends AbstractSizableImageElement
      */
     private int height=0;
 
+    /**
+     * X coordinate of the Checker's Element that need to be returned
+     */
+    private int itemToReturnX=0;
+
+    /**
+     * Y coordinate of the Checker's Element that need to be returned
+     */
+    private int itemToReturnY=0;
+
 
     /**
      * Creates a new CheckerBoard
@@ -95,6 +105,7 @@ public class CheckerBoard  extends AbstractSizableImageElement
         {
             e.setParent(this);
             this.availableElements.add(e);
+            this.initGrid();
         }
     }
 
@@ -125,8 +136,11 @@ public class CheckerBoard  extends AbstractSizableImageElement
         return tilesToSelect.get(0);
     }
 
-    @Override
-    public void draw(ImageElementDrawingAlgorithmInterface visitor)
+
+    /**
+     * Method that initializes the grid that need to Draw the tiles
+     */
+    private void initGrid()
     {
         for(int i=0;i<this.checkerGrid.length;i++)
         {
@@ -138,11 +152,46 @@ public class CheckerBoard  extends AbstractSizableImageElement
                 AbstractSizableImageElement currentTile=this.selectWhatToDraw(top,previous);
 
                 this.checkerGrid[i][j]= currentTile;
-
-                currentTile.draw(visitor);
             }
         }
+
+        this.itemToReturnX=0;
+        this.itemToReturnY=0;
     }
+
+
+    /**
+     * Method to retrieve the element that need to be Drawn
+     * @return The current Element that need to be drawn
+     */
+    public AbstractSizableImageElement getElement()
+    {
+        AbstractSizableImageElement e= this.checkerGrid[this.itemToReturnY][this.itemToReturnX];
+
+        if(this.itemToReturnX == this.checkerGrid[this.itemToReturnY].length)
+        {
+            this.itemToReturnY++;
+            this.itemToReturnX=0;
+        }
+        else
+        {
+            this.itemToReturnX++;
+        }
+
+
+        return e;
+    }
+
+
+    /**
+     * Checks if can draw the next Element
+     * @return true if we can get another element
+     */
+    public boolean canGetElement()
+    {
+        return this.itemToReturnY+1 < this.checkerGrid.length && this.itemToReturnX+1 < this.checkerGrid[this.itemToReturnY+1].length;
+    }
+
 
     /**
      * Checks id this class has element as available image element to draw
