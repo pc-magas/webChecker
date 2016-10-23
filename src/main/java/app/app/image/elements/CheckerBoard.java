@@ -2,11 +2,10 @@ package app.app.image.elements;
 
 
 import app.app.image.AbstractSizableImageElement;
-import app.app.image.draw.ImageElementDrawingAlgorithmInterface;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.StringTokenizer;
+import java.util.Iterator;
 
 
 /**
@@ -14,7 +13,7 @@ import java.util.StringTokenizer;
  *
  * Methos that Implements a Checkerboard with multiple color elements
  */
-public class CheckerBoard  extends AbstractSizableImageElement
+public class CheckerBoard  extends AbstractSizableImageElement implements Iterable<AbstractSizableImageElement>
 {
     /**
      * The elements that can be used to Draw the checker
@@ -109,6 +108,7 @@ public class CheckerBoard  extends AbstractSizableImageElement
             this.initGrid();
         }
     }
+
 
     /**
      * Method that selects a the correct ImageElement during the drawing
@@ -235,24 +235,10 @@ public class CheckerBoard  extends AbstractSizableImageElement
         return ok;
     }
 
-    public String toString() {
-        String returnString = "Available Tiles: \n";
-
-        for (AbstractSizableImageElement t : this.availableElements) {
-            returnString += t.toString() + "\n";
-        }
-
-        returnString += "\nTileGrid:\n";
-
-        for (int i = 0; i < this.checkerGrid.length; i++)
-        {
-            for (int j = 0; j < this.checkerGrid[i].length; j++)
-            {
-                returnString+=this.checkerGrid[i][j].toString()+"\t";
-            }
-            returnString+="\n";
-        }
-
-        return returnString;
+    @Override
+    public Iterator<AbstractSizableImageElement> iterator()
+    {
+        return availableElements.iterator();
     }
+    
 }

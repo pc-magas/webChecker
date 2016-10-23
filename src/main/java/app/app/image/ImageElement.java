@@ -7,9 +7,5 @@ import app.app.image.draw.ImageElementDrawingAlgorithmInterface;
  */
 public interface ImageElement
 {
-    /**
-     * Method that does all the drawing
-     * @param visitor The class that implements the drawing function
-     */
-    public abstract void draw(ImageElementDrawingAlgorithmInterface visitor);
+
 }

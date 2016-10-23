@@ -8,6 +8,10 @@ import app.app.image.AbstractSizableImageElement;
 public interface ImageElementDrawingAlgorithmInterface
 {
 
+    /**
+     * Method that draws the Element
+     * @param imageElement
+     */
     public void applyDrawAlgorithm(AbstractSizableImageElement imageElement);
 
 }

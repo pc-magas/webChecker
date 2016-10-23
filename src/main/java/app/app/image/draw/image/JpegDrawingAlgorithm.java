@@ -64,6 +64,11 @@ public class JpegDrawingAlgorithm implements ImageElementDrawingAlgorithmInterfa
 //        }
 
         System.out.println("Checker: \n"+c.toString());
+
+        for(AbstractSizableImageElement element : c)
+        {
+            this.applyDrawAlgorithm(element);
+        }
     }
 
     /**

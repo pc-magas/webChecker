@@ -31,9 +31,4 @@ public abstract class AbstractSizableImageElement implements ImageElement
         return this.parent;
     }
 
-    @Override
-    public void draw(ImageElementDrawingAlgorithmInterface visitor)
-    {
-        visitor.applyDrawAlgorithm(this);
-    }
 }
