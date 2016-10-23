@@ -1,17 +1,17 @@
 package app.app.image.draw.image;
 
 import app.app.image.AbstractSizableImageElement;
-import app.app.image.draw.ImageElementDrawingAlgorithmInterface;
+import app.app.image.draw.ImageElementDrawingAlgorithm;
 import app.app.image.elements.CheckerBoard;
 import app.app.image.elements.Tile;
 
-import java.awt.*;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 /**
  * Created by pcmagas on 11/10/2016.
  */
-public class JpegDrawingAlgorithm implements ImageElementDrawingAlgorithmInterface
+public class JpegDrawingAlgorithm extends AbstractDrawingAlgorithm
 {
 
     /**
@@ -24,6 +24,7 @@ public class JpegDrawingAlgorithm implements ImageElementDrawingAlgorithmInterfa
      */
     private Graphics2D g =null;
 
+
     /**
      *
      * @param width The Image's Width
@@ -31,53 +32,31 @@ public class JpegDrawingAlgorithm implements ImageElementDrawingAlgorithmInterfa
      */
     public JpegDrawingAlgorithm(int width,int height)
     {
-//        this.imagetoDraw=new BufferedImage(width,height,BufferedImage.TYPE_INT_ARGB);
-//        this.g= imagetoDraw.createGraphics();
+        this.imagetoDraw=new BufferedImage(width,height,BufferedImage.TYPE_INT_ARGB);
+        this.g= imagetoDraw.createGraphics();
+    }
+
+
+    @Override
+    final protected void tileDrawingAlgorithm(Tile t)
+    {
+        System.out.println("Tile "+t.toString());
     }
 
     @Override
-    public void applyDrawAlgorithm(AbstractSizableImageElement imageElement)
+    final protected void prepare(AbstractSizableImageElement element)
     {
-        if(imageElement instanceof CheckerBoard)
-        {
-            this.checkerBoardDrawingAlgorithm((CheckerBoard) imageElement);
-        }
-        else if(imageElement instanceof Tile)
-        {
-            this.tileDrawingAlgorithm((Tile) imageElement);
-        }
+        System.out.println("Preparint to draw: "+ element.toString());
     }
 
-    /**
-     * Method For Drawing checkerboards
-     * @param c
-     */
-    private void checkerBoardDrawingAlgorithm(CheckerBoard c)
-    {
-//        if(c.getParent()==null)
-//        {
-//
-//        }
-//        else
-//        {
-//
-//        }
+    @Override
+    protected void afterDraw(AbstractSizableImageElement element) {
 
-        System.out.println("Checker: \n"+c.toString());
-
-        for(AbstractSizableImageElement element : c)
-        {
-            this.applyDrawAlgorithm(element);
-        }
     }
 
-    /**
-     * Method for Drawing tiles
-     * @param t
-     */
-    private void tileDrawingAlgorithm(Tile t)
+    @Override
+    public Object drawnCheckerBoard()
     {
-        System.out.println("Tile:\n"+t.toString());
-        //TODO: Implement Drawing for tile
+        return null;
     }
 }

@@ -240,5 +240,5 @@ public class CheckerBoard  extends AbstractSizableImageElement implements Iterab
     {
         return availableElements.iterator();
     }
-    
+
 }
